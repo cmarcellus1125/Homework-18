@@ -1,6 +1,6 @@
 body{
     background-color: #252525;
-    margin:0;
+    margin: 0;
 }
 
 header{
@@ -80,7 +80,7 @@ h3{
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    line-height: 38px;
+    /* line-height: 38px; */
     color: #FFFFFF;
 }
 p{
@@ -88,7 +88,7 @@ p{
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    line-height: 29px;
+    /* line-height: 29px; */
     color: #FFFFFF;
 }
 a{
@@ -105,13 +105,8 @@ a:hover{
 .underline{
     text-decoration-line: underline;
 }
-/* About Section Styles */
+/* Section Styles */
 
-.about{
-    display: inline-block;
-    margin-left: 5.5%;
-    margin-right: 5.5%;
-}
 .work{
     display: flex;
     margin: 5.5%;
@@ -132,59 +127,65 @@ a:hover{
 }
 
 /* Left About text */
-
-.profiletxt{
-    float:left;
-    width: 44%
+.ab{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* align-content: center; */
+    gap: 13%;
+    margin-inline: 11%;
+    
 }
-
-/* Right Image */
-
 .profile{
-    display: inline-block;
-    float: right;
-    padding-right:5.5%;
-    padding-top:44px;
+    width: 640px;
 }
-
+.profiletxt{
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+}
 /* work section box */
 
 .inspectrum, .usda, .christmasbox{
     display: flex;
-    width: 1280px;
-    height: 550px;
+    width: 1440px;
+    height: 620px;
     margin-top: 72px;
+    background-size: cover;
 }
 .inspectrum{
     justify-content: flex-end;
-    background-image: url(images/inspectrum.png);
-    background-repeat: no-repeat;
+    background-image: url(images/inspectrum2x.png);
+    background-repeat:no-repeat;
     background-position: left;
 }
 .usda{
     justify-content: flex-start;
-    background-image: url(images/usda.png);
+    background-image: url(images/usda2x.png);
     background-repeat: no-repeat;
     background-position: right;
 
 }
 .christmasbox{
     justify-content: flex-end;
-    background-image: url(images/christmasbox.png);
-    background-image: no-repeat;
+    background-image: url(images/christmasbox2x.png);
+    background-repeat: no-repeat;
     background-position: left;
 }
 .workflex{
     display: flex;
     flex-direction: column;
+    align-content: center;
     align-items: center;
 }
 .workbox{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 37.5%;
+    width: 480px;
+    height: 440px;
     background: #465B65;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
@@ -208,17 +209,63 @@ button:hover{
     background: #1C209E;
     color: white;
 }
+
+/* Skill section */
+
+.skills{
+   display: flex;
+   flex-direction: row; 
+   justify-content: space-evenly;
+}
+.skillbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin: 20px;
+}
+
+/* Tools section */
+
+.tools{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+.tool-list{
+    display: block;
+    width: 285px;
+}
+.tool-icon{
+    display: flex;
+    height: 340px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px 36px;
+}
+.programs{
+    width: 60px;
+}
+.msoffice{
+    width: 48px;
+}
 /* Footer Style */
 
 footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     height: 75px;
     background: #465B65;
     padding: 5px 5.5%;
 }
 
 .logo{
-    float: right;
-    display: inline-block;
+    display: flex;
     width: 60px;
     height: 60px;
     padding-top: 8px;
@@ -228,4 +275,228 @@ footer{
     position: relative;
     top:4px;
     padding-inline:8px;
+}
+
+
+/*////////// 1440px //////////*/
+
+@media only screen and (max-width: 1440px){
+    .ab{
+        gap: 5%;
+    }
+    .inspectrum, .usda, .christmasbox{
+        width: 88%;
+        height: auto;
+    }
+    .workbox{
+        width: 37.5%;
+        height: auto;
+    }
+    .profiletxt{
+        width: 50%;
+    }
+    .line{
+        width: 390px;
+    }
+}
+
+/*////////// 1220px //////////*/
+
+@media only screen and (max-width: 1220px){
+    header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+    .logotxt{
+        display: flex;
+        float: none;
+        text-align: none;
+
+    }
+    .logo_white{
+        display: flex;
+        position: static;
+        margin-left: 20px;
+        margin-right: 0%;
+        height: 60px;
+        width: auto;
+    }
+    .line{
+        width: 620px;
+    }
+    .ab{
+        flex-direction: column;
+        gap: 0;
+        margin-inline: 0;
+    }
+    .profile{
+        width: 80%;
+    }
+    .profiletxt{
+        width: auto;
+        align-items: center;
+        margin-inline: 5.5%;
+    }
+    .work{
+        justify-content: center;
+    }
+}
+
+/*////////// 1125px //////////*/
+
+@media only screen and (max-width: 1125px){
+    header{
+        height: 180px;
+    }
+    .right{
+        margin-left: 20%;
+    }
+}
+
+/*////////// mobile //////////*/
+
+@media only screen and (max-width: 800px){
+    header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 120px;
+        }
+    .logotxt{
+        display: flex;
+        float: none;
+        text-align: none;
+        padding-top: 17px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .logo_white{
+        display: flex;
+        position: static;
+        margin-left: 20px;
+        margin-right: 0%;
+        height: 40px;
+        width: auto;
+    }
+    .header-button{
+        margin-inline: 15px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    footer{
+        padding: 0px 5.5%;
+        height: 80px;
+    }
+    
+    .logo{
+        width: 40px;
+        height: 40px;
+        padding-top: 8px;
+        align-self: center;
+    }
+    
+    .socialmedia{
+        align-items: center;
+        position: static;
+    }
+    h1{
+        font-size: 40px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+    }
+    h2{
+        font-size: 32px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+    }
+    h3{
+        font-size: 28px;
+    }
+    p{
+        font-size: 16px;
+    }
+    a{
+        font-size: 16px;
+    }
+    .line{
+        width: 324px;
+    }
+    .ab{
+        flex-direction: column;
+        gap: 0;
+        margin-inline: 0;
+    }
+    .profile{
+        width: 80%;
+    }
+    .profiletxt{
+        width: auto;
+        align-items: center;
+        margin-inline: 5.5%;
+    }
+    .work{
+        justify-content: center;
+    }
+    .inspectrum, .usda, .christmasbox{
+        width: 88%;
+        height: auto;
+        margin-top: 22px;
+        margin-bottom: 230px;
+        background-size:cover;
+    }
+    .inspectrum{
+        justify-content: center;
+        background-image: url(images/inspectrum-mobile.png);
+        /* background-position: left; */
+    }
+    .usda{
+        justify-content: center;
+        background-image: url(images/usda-mobile.png);
+        /* background-position: right; */
+    
+    }
+    .christmasbox{
+        justify-content: center;
+        background-image: url(images/christmasbox-mobile.png);
+        /* background-position: left; */
+    }
+    .workbox{
+        justify-content: space-between;
+        width: 83%;
+        height: auto;
+        margin: 0px;
+        margin: 0px 0px 0px;
+        padding: 22px;
+        translate: 0px 230px;
+    }
+    button{
+        font-size: 20px;
+    }
+    .skills{
+        flex-direction: column;
+        align-items: center;
+    }
+    .tools{
+        justify-content: space-evenly;
+        margin-top: 22px;
+        gap: 0px;
+    }
+    .tool-list{
+        width: auto;
+    }
+    .tool-icon{
+        height: 250px;
+        gap: 20px 24px;
+    }
+    .programs{
+        width: 40px;
+    }
+    .msoffice{
+        width: 36px;
+    }
 }
