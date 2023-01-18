@@ -448,22 +448,23 @@ footer{
         margin-top: 22px;
         margin-bottom: 230px;
         background-size:cover;
+        align-items: center;
     }
     .inspectrum{
         justify-content: center;
         background-image: url(images/inspectrum-mobile.png);
-        /* background-position: left; */
+         background-position: left;
     }
     .usda{
         justify-content: center;
         background-image: url(images/usda-mobile.png);
-        /* background-position: right; */
+         background-position: right;
     
     }
     .christmasbox{
         justify-content: center;
         background-image: url(images/christmasbox-mobile.png);
-        /* background-position: left; */
+         background-position: left;
     }
     .workbox{
         justify-content: space-between;
