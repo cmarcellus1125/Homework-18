@@ -4,10 +4,13 @@ body{
 }
 
 header{
-height: 80px;
-background: #465B65;
-padding-left: 5.5%;
-padding-right: 5.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background: #465B65;
+    padding-left: 5.5%;
+    padding-right: 5.5%;
 }
 
 /* Chris Marcellus Header Style */
@@ -27,11 +30,9 @@ padding-right: 5.5%;
 /* White Center Logo */
 
 .logo_white{
-    display:block;
-    position:absolute;
-    padding-top: 10px;
-    margin-left:44.5%;
-    margin-right:44.5%;
+    display:flex;
+    height:60px;
+    width:auto;
 }
 
 /* Header buttons */
@@ -53,6 +54,12 @@ padding-right: 5.5%;
 .header-button:hover{
     background: #1C209E;
     color: white;
+}
+
+.hbuttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 /* Text styles */
@@ -235,17 +242,16 @@ button:hover{
     gap: 70px;
 }
 .tool-list{
-    display: block;
-    width: 285px;
+    display: flex;
+    flex-direction: column;
 }
 .tool-icon{
     display: flex;
-    height: 340px;
+    /* height: 340px; */
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
-    gap: 30px 36px;
+    justify-content: center;
+    gap: 30px;
 }
 .programs{
     width: 60px;
@@ -259,22 +265,27 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     height: 75px;
     background: #465B65;
     padding: 5px 5.5%;
 }
-
+.fleft{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .logo{
     display: flex;
     width: 60px;
     height: 60px;
-    padding-top: 8px;
 }
 
 .socialmedia{
-    position: relative;
-    top:4px;
-    padding-inline:8px;
+    margin-inline: 10px;
+    height: 24px;
 }
 
 
@@ -353,6 +364,9 @@ footer{
     .right{
         margin-left: 20%;
     }
+    footer{
+        height: auto;
+    }
 }
 
 /*////////// mobile //////////*/
@@ -389,21 +403,21 @@ footer{
         line-height: 19px;
     }
     footer{
+        align-items: flex-start;
         padding: 0px 5.5%;
-        height: 80px;
+        height: 120px;
     }
     
     .logo{
         width: 40px;
         height: 40px;
-        padding-top: 8px;
+        /* padding-top: 8px; */
         align-self: center;
     }
-    
-    .socialmedia{
-        align-items: center;
-        position: static;
-    }
+  
+    /* .socialmedia{
+        margin-bottom: 16px;
+    } */
     h1{
         font-size: 40px;
         margin-top: 13px;
@@ -483,12 +497,12 @@ footer{
         align-items: center;
     }
     .tools{
-        justify-content: space-evenly;
+        justify-content: center;
         margin-top: 22px;
-        gap: 0px;
+        gap: 20px;
     }
-    .tool-list{
-        width: auto;
+    .tool-list h3{
+        font-size: 24px;
     }
     .tool-icon{
         height: 250px;
