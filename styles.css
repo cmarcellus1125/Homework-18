@@ -259,6 +259,7 @@ button:hover{
 .msoffice{
     width: 48px;
 }
+
 /* Footer Style */
 
 footer{
@@ -415,9 +416,7 @@ footer{
         align-self: center;
     }
   
-    /* .socialmedia{
-        margin-bottom: 16px;
-    } */
+    
     h1{
         font-size: 40px;
         margin-top: 13px;
